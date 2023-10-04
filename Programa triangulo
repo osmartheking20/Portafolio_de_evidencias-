@@ -1,0 +1,30 @@
+
+fun main()
+{
+    println("Ingrese la longitud del lado A: ")
+    val ladoA = readLine()?.toInt() ?: 0
+    
+    println("Ingrese la longitud del lado B: ")
+    val ladoB = readLine()?.toInt() ?: 0
+    
+    println("Ingrese la longitud del lado C: ")
+    val ladoC = readLine()?.toInt() ?: 0
+    
+    val tipo = tipoDeTriangulo(ladoA, ladoB, ladoC)
+    println("Es un $tipo")
+}
+
+fun tipoDeTriangulo(ladoA: Int, ladoB: Int, ladoC: Int): String {
+    // Verificar si los lados son mayores que cero
+    if (ladoA <= 0 || ladoB <= 0 || ladoC <= 0) {
+        return "Los lados no forman un triángulo válido"
+    }
+    
+    if (ladoA == ladoB && ladoB == ladoC) {
+        return "triángulo equilátero"
+    } else if (ladoA == ladoB || ladoB == ladoC || ladoC == ladoA) {
+        return "triángulo isósceles"
+    } else
+{
+        return "triángulo escaleno"
+    } }
