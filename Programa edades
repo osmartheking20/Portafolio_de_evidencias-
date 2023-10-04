@@ -1,0 +1,10 @@
+@ -12,7 +12,5 @@ fun main() {
+      in 18..25 -> println("Estás en la universidad")
+else -> {
+println("Edad inválida")
+println("Vuelve a correr el programa")
+        }
+    }
+}
+println("Vuelve a correr el programa")   }
+} }
